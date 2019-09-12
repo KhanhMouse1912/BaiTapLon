@@ -1,5 +1,5 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT']."/Class/PTPM-MNM/General/head.php";
+    include $_SERVER['DOCUMENT_ROOT']."/Class/BaiTapLon/General/head.php";
 ?>
 <body>
     <div id="create--relationships">

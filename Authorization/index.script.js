@@ -1,43 +1,34 @@
-$('.form').find('input, textarea').on('keyup blur focus', function (e) {
-  
-    var $this = $(this),
-        label = $this.prev('label');
-  
-        if (e.type === 'keyup') {
-              if ($this.val() === '') {
-            label.removeClass('active highlight');
-          } else {
-            label.addClass('active highlight');
-          }
-      } else if (e.type === 'blur') {
-          if( $this.val() === '' ) {
-              label.removeClass('active highlight'); 
-              } else {
-              label.removeClass('highlight');   
-              }   
-      } else if (e.type === 'focus') {
-        
-        if( $this.val() === '' ) {
-              label.removeClass('highlight'); 
-              } 
-        else if( $this.val() !== '' ) {
-              label.addClass('highlight');
-              }
-      }
-  
+$( document ).ready(function() {
+  $(function() {
+    $(".btn").click(function() {
+      $(".form-signin").toggleClass("form-signin-left");
+      $(".form-signup").toggleClass("form-signup-left");
+      $(".frame").toggleClass("frame-long");
+      $(".signup-inactive").toggleClass("signup-active");
+      $(".signin-active").toggleClass("signin-inactive");
+      $(".forgot").toggleClass("forgot-left");   
+      $(this).removeClass("idle").addClass("active");
+    });
   });
   
-  $('.tab a').on('click', function (e) {
-    
-    e.preventDefault();
-    
-    $(this).parent().addClass('active');
-    $(this).parent().siblings().removeClass('active');
-    
-    target = $(this).attr('href');
-  
-    $('.tab-content > div').not(target).hide();
-    
-    $(target).fadeIn(600);
-    
+  $(function() {
+    $(".btn-signup").click(function() {
+    $(".nav").toggleClass("nav-up");
+    $(".form-signup-left").toggleClass("form-signup-down");
+    $(".success").toggleClass("success-left"); 
+    $(".frame").toggleClass("frame-short");
+    });
   });
+  
+  $(function() {
+    $(".btn-signin").click(function() {
+    $(".btn-animate").toggleClass("btn-animate-grow");
+    $(".welcome").toggleClass("welcome-left");
+    $(".cover-photo").toggleClass("cover-photo-down");
+    $(".frame").toggleClass("frame-short");
+    $(".profile-photo").toggleClass("profile-photo-down");
+    $(".btn-goback").toggleClass("btn-goback-up");
+    $(".forgot").toggleClass("forgot-fade");
+    });
+  });
+});

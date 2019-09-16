@@ -1,0 +1,23 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  background: linear-gradient(
+      rgba(246, 247, 249, 0.8),
+      rgba(246, 247, 249, 0.8)
+    ),
+    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/sky-clouds-cloudy-mountain.jpg)
+      no-repeat center center fixed;
+  background-size: cover;
+}

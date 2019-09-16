@@ -21,19 +21,13 @@ body {
       no-repeat center center fixed;
   background-size: cover;
 }
-
 .author {
   background: url('images/bg--author.jpg') no-repeat;
   /* background-position: center; */
   background-attachment: fixed;
   background-size: cover;
-}
-
-.container {
-  width: 100vw;
-  padding-top: 60px;
-  padding-bottom: 100px;
   height: 100vh;
+  width: 100vw;
 }
 
 .frame {
@@ -372,7 +366,7 @@ textarea:focus {
 
 .btn-animate-grow {
   width: 130%;
-  height: 625px;
+  height: 60vh;
   position: relative;
   left: -55px;
   top: -420px;

@@ -21,4 +21,8 @@ $(document).ready(function () {
     $(".more--info").toggleClass('active');
   });
   // $(".info--user .info").siblings().removeClass('active');
+  $(".notifications--newest").click( function() {
+    // console.log('1');
+    $(".notifications--newest .detail--notification").toggleClass("active");
+  });
 });

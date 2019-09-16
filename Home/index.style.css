@@ -12,7 +12,9 @@
   list-style: none;
   font-size: 14px;
 }
-
+ul {
+  margin: 0;
+}
 body {
   background: linear-gradient(
       rgba(246, 247, 249, 0.8),
@@ -93,17 +95,55 @@ body {
   font-size: 12px;
   padding: 0px 4px;
 }
-.notifications--newest {
+.bell {
   cursor: pointer;
 }
 .detail--notification {
   top: 100%;
-  right: 0;
-  background: #ccc;
+  right: 1rem;
+  z-index: +5;
+  height: 0;
+  width: 0;
+  transition: .5s all ease;
+  overflow: hidden;
+}
+.detail--notification.active {
+  height: 307px;
   width: 400px;
 }
-.detail--notification .items {
-  border-bottom: 1px solid #222;
+.list--noti-newest:before {
+  content: "";
+  position: absolute;
+  border-radius: 6px 0 0;
+  height: 15px;
+  transform: rotate(45deg);
+  top: -7px;
+  width: 15px;
+  right: 17px;
+  z-index: -1;
+  background: #c9c9c9;
+}
+.list--noti-newest .items {
+  border-bottom: 1px solid #22222224;
+  background: #ccc;
+}
+.list--noti-newest .items:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.list--noti-newest .items:last-child {
+  /* border: 0; */
+}
+.view--more {
+  text-decoration: underline;
+  font-size: 13px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #ccc;
+  transition: all 1s ease;
+}
+.view--more:hover {
+  background: #bebcbc;
 }
 .local {
   white-space: nowrap;
@@ -162,7 +202,35 @@ body {
 .dots--options {
   cursor: pointer;
 }
-
+.create--relationship {
+  border: 0;
+  background: #ccc;
+  transition: all 1s ease;
+  border-radius: 10px;
+}
+.create--relationship:hover, .create--relationship:active, .create--relationship:focus {
+  background: #bebcbc;
+  cursor: pointer;
+  outline: none;
+}
+.info--rela:before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 1px;
+  background: #aeaeae;
+}
+.dots {
+  top: 8px;
+  right: 15px;
+}
+.list--rela .items {
+  background: #ccc;
+  border-radius: 5px;
+}
 /* ----------------------------------------- SEARCH ---------------------------------- */
 .input--search {
   background: #ccccccd6;

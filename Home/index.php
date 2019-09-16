@@ -33,38 +33,57 @@
                             <span class="position-absolute number--notification">3</span>
                         </div>
                         <div class="position-absolute detail--notification">
-                            <div class="items p-2">
-                                <ul>
-                                    <li>
-                                        <span>Chuẩn bị hẹn</span>
-                                        <span class="px-1"><b>Anh</b></span>
-                                        <span class="name">Nguyen Cong Khanh</span>
-                                    </li>
-                                    <li>
-                                        <span class="time">Vào 10:10</span>
-                                        <span class="day"> - 01/01/2018</span>
-                                    </li>
-                                    <li>
-                                        <span class="local">Tại: Số nhà 11, Đường Xuân Phương, Nam Từ Liêm, Hà Nội</span>
-                                    </li>
-                                </ul>
+                            <div class="list--noti-newest">
+                                <div class="items p-3">
+                                    <ul>
+                                        <li>
+                                            <span>Chuẩn bị hẹn</span>
+                                            <span class="px-1"><b>Anh</b></span>
+                                            <span class="name">Nguyen Cong Khanh</span>
+                                        </li>
+                                        <li>
+                                            <span class="time">Vào 10:10</span>
+                                            <span class="day"> - 01/01/2018</span>
+                                        </li>
+                                        <li>
+                                            <span class="local">Tại: Số nhà 11, Đường Xuân Phương, Nam Từ Liêm, Hà Nội</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="items p-3">
+                                    <ul>
+                                        <li>
+                                            <span>Chuẩn bị hẹn</span>
+                                            <span class="px-1"><b>Chu</b></span>
+                                            <span class="name">Nguyen Cong Khanh</span>
+                                        </li>
+                                        <li>
+                                            <span class="time">Vào 10:10</span>
+                                            <span class="day"> - 01/01/2018</span>
+                                        </li>
+                                        <li>
+                                            <span class="local">Tại: Số nhà 11, Đường Xuân Phương, Nam Từ Liêm, Hà Nội</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="items p-3">
+                                    <ul>
+                                        <li>
+                                            <span>Chuẩn bị hẹn</span>
+                                            <span class="px-1"><b>Chu</b></span>
+                                            <span class="name">Nguyen Cong Khanh</span>
+                                        </li>
+                                        <li>
+                                            <span class="time">Vào 10:10</span>
+                                            <span class="day"> - 01/01/2018</span>
+                                        </li>
+                                        <li>
+                                            <span class="local">Tại: Số nhà 11, Đường Xuân Phương, Nam Từ Liêm, Hà Nội</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="items p-2">
-                                <ul>
-                                    <li>
-                                        <span>Chuẩn bị hẹn</span>
-                                        <span class="px-1"><b>Anh</b></span>
-                                        <span class="name">Nguyen Cong Khanh</span>
-                                    </li>
-                                    <li>
-                                        <span class="time">Vào 10:10</span>
-                                        <span class="day"> - 01/01/2018</span>
-                                    </li>
-                                    <li>
-                                        <span class="local">Tại: Số nhà 11, Đường Xuân Phương, Nam Từ Liêm, Hà Nội</span>
-                                    </li>
-                                </ul>
-                            </div>
+                            <div class="view--more py-2 text-center">Xem chi tiết</div>
                         </div>
                     </div>
                     <div class="info--user position-relative ml-auto">

@@ -1,4 +1,3 @@
-
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -16,13 +15,29 @@ function openCity(evt, cityName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
+
+
 $(document).ready(function () {
-  $(".info--user .info").click( function() {
-    $(".more--info").toggleClass('active');
+  
+  $(".info").click( function() {
+    $("#more--info").toggleClass("active");
   });
   // $(".info--user .info").siblings().removeClass('active');
   $(".notifications--newest").click( function() {
-    // console.log('1');
-    $(".notifications--newest .detail--notification").toggleClass("active");
+    $(".detail--notification").toggleClass("active");
   });
+
+  // =================== RELATIONSHIPS
+  $(".view--more").click( function() {
+    console.log($(this).parent().toggleClass("active"));
+    $(this).parent().toggleClass("active");
+  } );
+  $(".show--actions").click( function() {
+    $(".actions--rela").toggleClass('active');
+  });
+  $("#datepicker").datepicker({ 
+    autoclose: true, 
+    todayHighlight: true
+  }).datepicker('update', new Date());
+
 });

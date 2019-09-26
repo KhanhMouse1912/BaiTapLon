@@ -51,6 +51,7 @@ body {
   background: #c9c9c9;
   z-index: +10;
   width: 310px;
+  box-shadow: 0px 0px 0 1px #ff000033;
 }
 .more--info .avt {
   height: 70px;
@@ -110,36 +111,19 @@ body {
 .detail--notification.active {
   height: 307px;
   width: 400px;
-}
-.list--noti-newest:before {
-  content: "";
-  position: absolute;
-  border-radius: 6px 0 0;
-  height: 15px;
-  transform: rotate(45deg);
-  top: -7px;
-  width: 15px;
-  right: 17px;
-  z-index: -1;
-  background: #c9c9c9;
+  border-radius: 10px;
+  background: #ccc;
+  box-shadow: 0px 0px 0 1px #ff000033;
 }
 .list--noti-newest .items {
   border-bottom: 1px solid #22222224;
-  background: #ccc;
-}
-.list--noti-newest .items:first-child {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-.list--noti-newest .items:last-child {
-  /* border: 0; */
 }
 .view--more {
   text-decoration: underline;
   font-size: 13px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  background: #ccc;
+  /* background: #ccc; */
   transition: all 1s ease;
 }
 .view--more:hover {
@@ -154,13 +138,17 @@ body {
 }
 /* End: Header */
 
+/* ============================================================================== MAIN  ====================================== */
+.main--home {
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
+}
 /* Style the tab */
 .tab {
   float: left;
-  border: 1px solid #ccc;
   background-color: #f1f1f1;
   width: 20%;
-  height: calc(100vh - 100px);
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -192,14 +180,40 @@ body {
 .tabcontent {
   float: left;
   padding: 0px 12px;
-  border: 1px solid #ccc;
+  border-left: 1px solid #ccc;
   width: 80%;
-  border-left: none;
-  height: calc(100vh - 100px);
+  /* border-left: none; */
 }
 
 /* =================================== Relationships  =========================== */
 .dots--options {
+  cursor: pointer;
+}
+.dots--options .actions--rela {
+  width: 120px;
+  border-radius: 6px;
+  background: #a0a0a0;
+  color: #fff;
+  right: 0;
+  top: 100%;
+  text-align: center;
+  display: none;
+  overflow: hidden;
+}
+.dots--options .actions--rela.active {
+  display: block;
+}
+.dots--options .actions--rela p {
+  transition: all .5s ease;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+.dots--options .actions--rela p:last-child {
+  border: 0;
+}
+.dots--options .actions--rela p:hover {
+  /* background: #fafafa; */
+  color: #222;
   cursor: pointer;
 }
 .create--relationship {
@@ -227,10 +241,141 @@ body {
   top: 8px;
   right: 15px;
 }
-.list--rela .items {
+.content--list--rela {
   background: #ccc;
   border-radius: 5px;
+  margin-bottom: 1rem;
 }
+
+/* ---- Popup  */
+.modal--wrapper {
+  background-color: rgba(153, 153, 153, 0.4);
+  bottom: 0;
+  font-family: "Open Sans", sans-serif;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  /* display: none; */
+}
+.modal--wrapper .modal--dialog {
+  height: 100%;
+  width: 100%;
+}
+.modal--wrapper .modal--dialog .modal--content {
+  background-color: #fff;
+  border-radius: 0.625rem;
+  padding: 1.25rem;
+  width: 440px;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--header .title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--header .desc {
+  color: #999999;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--body {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--body-input {
+  border-radius: 0.625rem;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--body-input:active, .modal--wrapper .modal--dialog .modal--content .modal--body-input:focus {
+  border-color: #ff9e4a;
+  border-radius: 10px;
+  outline: 0 !important;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--body-input::placeholder {
+  text-transform: none;
+  color: #cccccc;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--body .duplicate h5 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--body .duplicate .account--list-item {
+  margin-top: 0.75rem;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--body .duplicate .account--list-item .action .custom--checkbox input[type="checkbox"] {
+  border-radius: 6px;
+  border: solid 1.5px #cccccc;
+  cursor: pointer;
+  height: 20px;
+  outline: none;
+  width: 20px;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--body .duplicate .account--list-item .action .custom--checkbox input[type="checkbox"]:checked {
+  background-color: #ffb94a;
+  border: solid 1px #ffb94a;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--body .duplicate .account--list-item .action .custom--checkbox input[type="checkbox"]:checked:before {
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  content: "";
+  display: block;
+  height: 10px;
+  position: relative;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 7px;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--footer {
+  font-size: 0.875rem;
+  margin-top: 1.5rem;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--footer .btn--submit {
+  background-color: #ffb94a;
+  border: 1px solid #ffb94a;
+  border-radius: 0.625rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  outline: none;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.4s ease;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--footer .btn--submit:hover {
+  background-color: #ff9e4a;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--footer .btn--skip {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  color: #999;
+  font-weight: 600;
+  outline: none;
+  padding: 0.5rem 0.75rem;
+}
+.modal--wrapper .modal--dialog .modal--content .modal--footer .btn--skip:hover {
+  background-color: #f7f7f7;
+}
+
+.options--choose-rela {
+  width: 90%;
+  padding: .375rem .75rem;
+  /* font-size: 1rem; */
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+/* label{margin-left: 20px;} */
+#datepicker{width:180px; margin: 0 20px 20px 20px;}
+#datepicker > span:hover{cursor: pointer;}
+
 /* ----------------------------------------- SEARCH ---------------------------------- */
 .input--search {
   background: #ccccccd6;

@@ -1,0 +1,131 @@
+.modal--wrapper {
+    background-color: rgba(153, 153, 153, 0.4);
+    bottom: 0;
+    font-family: "Open Sans", sans-serif;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;    
+}
+.create--rela {
+    /* display: none; */
+}
+
+.modal--wrapper .modal--dialog {
+    height: 100%;
+    width: 100%;
+}
+
+.modal--wrapper .modal--dialog .modal--content {
+    background-color: #fff;
+    border-radius: 0.625rem;
+    padding: 1.25rem;
+    width: 440px;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--header .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--header .desc {
+    color: #999999;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--body {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--body-input {
+    border-radius: 0.625rem;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--body-input:active,
+.modal--wrapper .modal--dialog .modal--content .modal--body-input:focus {
+    border-color: #ff9e4a;
+    border-radius: 10px;
+    outline: 0 !important;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--body-input::placeholder {
+    text-transform: none;
+    color: #cccccc;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--body .duplicate h5 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--body .duplicate .account--list-item {
+    margin-top: 0.75rem;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--body .duplicate .account--list-item .action .custom--checkbox input[type="checkbox"] {
+    border-radius: 6px;
+    border: solid 1.5px #cccccc;
+    cursor: pointer;
+    height: 20px;
+    outline: none;
+    width: 20px;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--body .duplicate .account--list-item .action .custom--checkbox input[type="checkbox"]:checked {
+    background-color: #ffb94a;
+    border: solid 1px #ffb94a;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--body .duplicate .account--list-item .action .custom--checkbox input[type="checkbox"]:checked:before {
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    content: "";
+    display: block;
+    height: 10px;
+    position: relative;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 7px;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--footer {
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--footer .btn--submit {
+    background-color: #ffb94a;
+    border: 1px solid #ffb94a;
+    border-radius: 0.625rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    outline: none;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.4s ease;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--footer .btn--submit:hover {
+    background-color: #ff9e4a;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--footer .btn--skip {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    color: #999;
+    font-weight: 600;
+    outline: none;
+    padding: 0.5rem 0.75rem;
+}
+
+.modal--wrapper .modal--dialog .modal--content .modal--footer .btn--skip:hover {
+    background-color: #f7f7f7;
+}
